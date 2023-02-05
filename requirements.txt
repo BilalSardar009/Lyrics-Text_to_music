@@ -1,6 +1,6 @@
 tqdm
 fuzzywuzzy[speedup]
-fluidsynth
+!apt install fluidsynth
 midi2audio
 pretty_midi
 librosa
