@@ -1,5 +1,22 @@
 import sys
 import os
+
+os.system("pip install tqdm")
+
+# for data
+os.system("pip install fuzzywuzzy[speedup]")
+
+# for listening
+os.system("apt install fluidsynth") #Pip does not work for some reason. Only apt works
+os.system("pip install midi2audio")
+
+# packages below are for plotting pianoroll only
+# they are not needed for anything else
+os.system("pip install pretty_midi")
+os.system("pip install librosa")
+os.system("pip install matplotlib")
+
+
 import json
 import secrets
 import copy
