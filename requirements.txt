@@ -1,0 +1,6 @@
+tqdm
+fuzzywuzzy[speedup]
+midi2audio
+pretty_midi
+librosa
+matplotlib
