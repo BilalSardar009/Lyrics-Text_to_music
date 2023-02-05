@@ -5,4 +5,3 @@ pretty_midi
 librosa
 matplotlib
 IPython
-midi-ddsp
