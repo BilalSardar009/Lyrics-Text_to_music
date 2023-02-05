@@ -22,7 +22,7 @@ import pretty_midi
 import librosa.display
 import matplotlib.pyplot as plt
 
-
+os.system("!apt install fluidsynth ")
 print('Loading the Karaoke model. Please wait...')
 data = TMIDI.Tegridy_Any_Pickle_File_Loader('Karaoke-English-Full')
 
