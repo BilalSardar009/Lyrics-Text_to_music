@@ -1,8 +1,8 @@
 ---
 title: Lyrics-Text To Music
-emoji: 📚
+emoji: 🎺🎹
 colorFrom: gray
-colorTo: purple
+colorTo: red
 sdk: gradio
 sdk_version: 3.17.0
 app_file: app.py
