@@ -1,6 +1,6 @@
 import sys
 import os
-os.system("!apt install fluidsynth")
+os.system("apt install fluidsynth")
 import json
 import secrets
 import copy
