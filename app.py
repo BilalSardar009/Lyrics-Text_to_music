@@ -8,7 +8,7 @@ os.system("pip install fuzzywuzzy[speedup]")
 
 # for listening
 os.system("apt install fluidsynth") #Pip does not work for some reason. Only apt works
-#os.system("pip install midi2audio")
+os.system("pip install midi2audio")
 
 # packages below are for plotting pianoroll only
 # they are not needed for anything else
