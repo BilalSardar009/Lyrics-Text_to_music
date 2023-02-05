@@ -1,6 +1,6 @@
 import sys
 import os
-
+os.system("pip install IPython")
 os.system("pip install tqdm")
 
 # for data
