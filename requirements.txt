@@ -1,8 +1,0 @@
-tqdm
-fuzzywuzzy[speedup]
-pyfluidsynth
-midi2audio
-pretty_midi
-librosa
-matplotlib
-IPython
