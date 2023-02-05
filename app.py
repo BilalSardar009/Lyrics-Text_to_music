@@ -4,8 +4,8 @@ from pathlib import Path
 os.system("midi_ddsp_download_model_weights")
 
 def inference(audio):
-  os.system("midi_ddsp_synthesize --midi_path "+audio.name)
-  return Path(audio.name).stem+"/0_violin.wav"
+  os.system("midi_ddsp_synthesize --midi_path "+audio)
+  return Path(audio).stem+"/0_violin.wav"
 import json
 import secrets
 import copy
@@ -171,7 +171,7 @@ def TextToMusic(lyrics):
   piano_roll = pm.get_piano_roll()
 
   plt.figure(figsize=(14, 5))
-  librosa.display.specshow(piano_roll, x_axis='time', y_axis='cqt_note', fmin=1, hop_length=160, sr=16000, cmap=plt.cm.hot)
+  #librosa.display.specshow(piano_roll, x_axis='time', y_axis='cqt_note', fmin=1, hop_length=160, sr=16000, cmap=plt.cm.hot)
   plt.title('Composition: ' + fn1)
   plt.savefig('my_plot.png')
   print('Synthesizing the last output MIDI. Please stand-by... ')
