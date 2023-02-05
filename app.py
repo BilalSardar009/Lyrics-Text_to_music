@@ -24,7 +24,7 @@ import matplotlib.pyplot as plt
 
 
 print('Loading the Karaoke model. Please wait...')
-data = TMIDI.Tegridy_Any_Pickle_File_Loader('/Karaoke-English-Full')
+data = TMIDI.Tegridy_Any_Pickle_File_Loader('Karaoke-English-Full')
 
 print('Done!')
 print('Prepping data...')
