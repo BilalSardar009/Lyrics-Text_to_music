@@ -1,22 +1,5 @@
 import sys
 import os
-os.system("pip install IPython")
-os.system("pip install tqdm")
-os.system("pip install -Iv https://pypi.python.org/packages/source/p/pyFluidSynth/pyFluidSynth-1.2.4.tar.gz#md5=60079310701d0b9298b65a8b6728ffcc")
-# for data
-os.system("pip install fuzzywuzzy[speedup]")
-
-# for listening
-os.system("apt install fluidsynth") #Pip does not work for some reason. Only apt works
-os.system("pip install midi2audio")
-
-# packages below are for plotting pianoroll only
-# they are not needed for anything else
-os.system("pip install pretty_midi")
-os.system("pip install librosa")
-os.system("pip install matplotlib")
-
-
 import json
 import secrets
 import copy
