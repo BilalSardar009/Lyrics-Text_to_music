@@ -25,7 +25,7 @@ from IPython.display import display, Javascript, HTML, Audio
 
 # only for plotting pianoroll
 import pretty_midi
-import librosa.display
+#import librosa.display
 import matplotlib.pyplot as plt
 
 
