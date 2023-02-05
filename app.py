@@ -23,7 +23,7 @@ import pretty_midi
 import librosa.display
 import matplotlib.pyplot as plt
 
-
+midtoaud=gr.Interface.load(name="spaces/kboaten/MIDI-Audio-Extension")
 print('Loading the Karaoke model. Please wait...')
 data = TMIDI.Tegridy_Any_Pickle_File_Loader('Karaoke-English-Full')
 
@@ -171,8 +171,15 @@ def TextToMusic(lyrics):
   plt.savefig('my_plot.png')
   print('Synthesizing the last output MIDI. Please stand-by... ')
   
-
-  return fname + '.mid','my_plot.png'
+  url=midtoaud("deep-muse-Output-MIDI.mid",int(100),fn_index=0)
+  save_as = "file.wav"
+    
+  data1 = urllib.request.urlopen(url)
+    
+  f = open(save_as,'wb')
+  f.write(data1.read())
+  f.close()
+  return 'file.wav','my_plot.png'
 
 demo = gr.Interface(
     fn=TextToMusic, 
