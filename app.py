@@ -49,9 +49,9 @@ for o in auto.tqdm(kar):
 
 print('Done! Enjoy! :)')
 
-def TextToMusic(lyrics):
+def TextToMusic(lyrics,notes,rand):
   text = list(lyrics.split("."))
-  randomize_words_matching = True
+  randomize_words_matching = rand
   song = []
 
   words_lst = ''
@@ -171,7 +171,7 @@ def TextToMusic(lyrics):
   plt.savefig('my_plot.png')
   print('Synthesizing the last output MIDI. Please stand-by... ')
   
-  url=midtoaud("deep-muse-Output-MIDI.mid",int(100),fn_index=0)
+  url=midtoaud("deep-muse-Output-MIDI.mid",int(notes),fn_index=0)
   save_as = "file.wav"
     
   data1 = urllib.request.urlopen(url)
@@ -183,9 +183,9 @@ def TextToMusic(lyrics):
 
 demo = gr.Interface(
     fn=TextToMusic, 
-    inputs=[gr.inputs.Textbox(label='Enter Prompt')],
+    inputs=[gr.inputs.Textbox(label='Enter Prompt'),gr.inputs.Number(label='Enter Number of Notes'),gr.inputs.Checkbox(label="randomize_words_matching")],
     outputs=["audio","image"],
-    examples=[["I love you very very much.I can not live without you.You always present on my mind.I often think about you.I am all out of love I am so lost without you."]],
+    examples=[["I love you very very much.I can not live without you.You always present on my mind.I often think about you.I am all out of love I am so lost without you.",100,True]],
     title="Lyrics Text To Music",
     )
 demo.launch(debug=True)
