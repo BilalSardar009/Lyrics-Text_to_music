@@ -1,5 +1,11 @@
 import sys
 import os
+
+os.system("midi_ddsp_download_model_weights")
+
+def inference(audio):
+  os.system("midi_ddsp_synthesize --midi_path "+audio.name)
+  return Path(audio.name).stem+"/0_violin.wav"
 import json
 import secrets
 import copy
@@ -169,10 +175,9 @@ def TextToMusic(lyrics):
   plt.title('Composition: ' + fn1)
   plt.savefig('my_plot.png')
   print('Synthesizing the last output MIDI. Please stand-by... ')
-  #FluidSynth("/usr/share/sounds/sf2/FluidR3_GM.sf2", 16000).midi_to_audio(str(fname + '.mid'), str(fname + '.wav'))
-  #Audio(str(fname + '.wav'), rate=16000)
+  
 
-  return fname + '.mid','my_plot.png'
+  return inference(fname + '.mid'),'my_plot.png'
 
 demo = gr.Interface(
     fn=TextToMusic, 
