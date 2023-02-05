@@ -172,7 +172,7 @@ def TextToMusic(lyrics):
   print('Synthesizing the last output MIDI. Please stand-by... ')
   
 
-  return inference(fname + '.mid'),'my_plot.png'
+  return fname + '.mid','my_plot.png'
 
 demo = gr.Interface(
     fn=TextToMusic, 
