@@ -1,6 +1,6 @@
 import sys
 import os
-#os.system("apt install fluidsynth")
+os.system("apt install fluidsynth")
 import json
 import secrets
 import copy
@@ -15,7 +15,7 @@ from pprint import pprint
 
 import tqdm.auto
 from tqdm import auto
-#from midi2audio import FluidSynth
+from midi2audio import FluidSynth
 from IPython.display import display, Javascript, HTML, Audio
 
 # only for plotting pianoroll
@@ -170,7 +170,7 @@ def TextToMusic(lyrics):
   plt.title('Composition: ' + fn1)
   plt.savefig('my_plot.png')
   print('Synthesizing the last output MIDI. Please stand-by... ')
-  #FluidSynth("/usr/share/sounds/sf2/FluidR3_GM.sf2", 16000).midi_to_audio(str(fname + '.mid'), str(fname + '.wav'))
+  FluidSynth("/usr/share/sounds/sf2/FluidR3_GM.sf2", 16000).midi_to_audio(str(fname + '.mid'), str(fname + '.wav'))
   Audio(str(fname + '.wav'), rate=16000)
 
   return fname + '.wav','my_plot.png'
