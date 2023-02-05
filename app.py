@@ -178,6 +178,7 @@ demo = gr.Interface(
     fn=TextToMusic, 
     inputs=[gr.inputs.Textbox(label='Enter Prompt')],
     outputs=["audio","image"],
+    examples=[["I love you very very much.I can not live without you.You always present on my mind.I often think about you.I am all out of love I am so lost without you."]],
     title="Lyrics Text To Music",
     )
 demo.launch(debug=True)
