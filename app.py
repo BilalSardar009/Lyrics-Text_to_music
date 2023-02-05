@@ -152,7 +152,7 @@ def TextToMusic(lyrics):
 
   pprint(words_lst, compact=True)
   print('=' * 100)
-  TMIDI.Tegridy_SONG_to_MIDI_Converter(song1, output_file_name='/content/deep-muse-Output-MIDI')
+  TMIDI.Tegridy_SONG_to_MIDI_Converter(song1, output_file_name='deep-muse-Output-MIDI')
   fname = 'deep-muse-Output-MIDI'
 
   fn = os.path.basename(fname + '.mid')
