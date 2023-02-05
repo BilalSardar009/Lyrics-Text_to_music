@@ -1,6 +1,6 @@
 tqdm
 fuzzywuzzy[speedup]
---upgrade pyfluidsynth
+pyfluidsynth
 midi2audio
 pretty_midi
 librosa
