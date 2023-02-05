@@ -1,6 +1,6 @@
 import sys
 import os
-
+from pathlib import Path
 os.system("midi_ddsp_download_model_weights")
 
 def inference(audio):
