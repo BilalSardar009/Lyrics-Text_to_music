@@ -169,10 +169,10 @@ def TextToMusic(lyrics):
   plt.title('Composition: ' + fn1)
   plt.savefig('my_plot.png')
   print('Synthesizing the last output MIDI. Please stand-by... ')
-  FluidSynth("/usr/share/sounds/sf2/FluidR3_GM.sf2", 16000).midi_to_audio(str(fname + '.mid'), str(fname + '.wav'))
-  Audio(str(fname + '.wav'), rate=16000)
+  #FluidSynth("/usr/share/sounds/sf2/FluidR3_GM.sf2", 16000).midi_to_audio(str(fname + '.mid'), str(fname + '.wav'))
+  #Audio(str(fname + '.wav'), rate=16000)
 
-  return fname + '.wav','my_plot.png'
+  return fname + '.mid','my_plot.png'
 
 demo = gr.Interface(
     fn=TextToMusic, 
