@@ -5,3 +5,5 @@ pretty_midi
 librosa
 matplotlib
 IPython
+mido  
+midi2audio
