@@ -1,12 +1,7 @@
 ---
 title: Lyrics-Text To Music
-emoji: 🎺🎹
-colorFrom: gray
-colorTo: red
-sdk: gradio
-sdk_version: 3.17.0
+Demo: [🎺🎹](https://huggingface.co/spaces/BilalSardar/Lyrics-Text_to_music)
 app_file: app.py
-pinned: false
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+
